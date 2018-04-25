@@ -5,12 +5,17 @@
   "author": "lsy <272631750@qq.com>",
   "license": "MIT",
   "private": false,
+  "main": "dist/vue-pay-keyboard.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
     "vue": "^2.5.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blubiubiu/vue-pay-pop"
   },
   "browserslist": [
     "> 1%",
