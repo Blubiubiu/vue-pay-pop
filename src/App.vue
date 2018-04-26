@@ -21,7 +21,6 @@ export default {
         show: false,
         del: 'x'
       },
-
     }
   },
   components: {
