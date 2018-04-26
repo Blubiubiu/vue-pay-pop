@@ -1,11 +1,11 @@
 {
   "name": "vue-pay-pop",
   "description": "A Pay Plugin",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "lsy <272631750@qq.com>",
   "license": "MIT",
   "private": false,
-  "main": "dist/vue-pay-keyboard.js",
+  "main": "dist/vue-pay-pop.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
