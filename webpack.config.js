@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/components/vue-pay-pop.js',
+  entry: './src/lib/vue-pay-pop.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',

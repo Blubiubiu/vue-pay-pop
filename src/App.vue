@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import vuePayPop from './components/vue-pay-pop'
+import vuePayPop from './lib/vue-pay-pop'
 
 export default {
   name: 'app',
