@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/npm/v/vue-pay-pop.svg">
 </a>
 
-![image](https://github.com/Blubiubiu/vue-pay-pop/tree/master/gif/demo.gif)
+![image](https://github.com/Blubiubiu/vue-pay-pop/tree/master/gif/demo.png)
 
 
 ## Install
