@@ -62,7 +62,7 @@ Vue.use(vuePayPop)
   </script>
 ```
 
-##options
+## options
 
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
