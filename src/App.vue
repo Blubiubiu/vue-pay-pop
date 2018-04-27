@@ -14,12 +14,7 @@ export default {
   data () {
     return {
       payPopOptions: {
-        title: '请输入支付密码',
-        pwdNum: 6,
-        isPay: true,
-        txt: '请稍候',
-        show: false,
-        del: 'x'
+        isShow: false
       },
     }
   },
@@ -28,18 +23,17 @@ export default {
   },
   methods: {
     inputDown(val) {
-      this.payPopOptions.isPay = false;
       //模拟检查数据
       setTimeout(() => {
         if (val == '111111') {
-          this.$refs.pay.$payStatus('验证通过', false)
+          this.$refs.pay.$payStatus(true)
         } else {
-          this.$refs.pay.$payStatus('验证失败', true)
+          this.$refs.pay.$payStatus(false)
         }
       }, 1000)
     },
     showPayPop() {
-      this.payPopOptions.show = true;
+      this.payPopOptions.isShow = true;
     }
   }
 }

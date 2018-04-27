@@ -1,7 +1,9 @@
 # vue-pay-pop
 <<<<<<< HEAD
 
-> A Vue.js project
+> A Vue.js Pay Plugin
+
+![image]https://github.com/Blubiubiu/vue-pay-pop/gif/demo.gif)
 
 ## Build Setup
 

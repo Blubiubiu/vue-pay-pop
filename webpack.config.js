@@ -2,10 +2,12 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
+  // entry: './src/main.js',
   entry: './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
+    // filename: 'build.js',
     filename: 'vue-pay-pop.js',
     library: 'vue-pay-pop',
     libraryTarget: 'umd',
