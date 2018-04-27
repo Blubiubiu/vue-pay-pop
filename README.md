@@ -3,6 +3,10 @@
 
 > A Vue.js Pay Plugin
 
+<a href="https://www.npmjs.org/package/vue-pay-pop">
+  <img src="https://img.shields.io/npm/v/vue-pay-pop.svg">
+</a>
+
 ![image]https://github.com/Blubiubiu/vue-pay-pop/gif/demo.gif)
 
 ## Build Setup
