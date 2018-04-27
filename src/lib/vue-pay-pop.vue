@@ -47,7 +47,7 @@
       return {
         //可选参数，支持改变
         //顶部文字
-        title: this.payPopOptions.title || '请输入支付密码1112',
+        title: this.payPopOptions.title || '请输入支付密码',
         //顶部关闭按钮
 
         //密码长度
@@ -60,6 +60,10 @@
         loadingTime: this.payPopOptions.loadingTime || 1000,
         //显示结果后，多久重回默认
         resultTime: this.payPopOptions.resultTime || 1000,
+        //成功文字
+        successTxt: this.payPopOptions.successTxt || '支付成功',
+        //失败文字
+        failTxt: this.payPopOptions.failTxt || '支付失败',
         //默认参数，无法改变
         //键盘数字(1~9)
         keyBoards: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
@@ -68,11 +72,7 @@
         //默认输入框是否显示
         //isShow: this.payPopOptions.isShow,
         //默认输入框与等待层是否显示
-        status: true,
-        //成功文字
-        successTxt: this.payPopOptions.successTxt || '支付成功',
-        //失败文字
-        failTxt: this.payPopOptions.failTxt || '支付失败'
+        status: true
       }
     },
     methods: {
