@@ -16,14 +16,20 @@
         </div>
         <div class="pay-keyboard-wrapper">
           <div class="pay-keyboard">
-            <div class="pay-key" v-for="item in keyBoards" :key="item" @click="val2input(item)">
-              {{item}}
+            <div class="pay-key-wrapper" v-for="item in keyBoards" :key="item">
+              <div class="pay-key" @click="val2input(item)">
+                {{item}}
+              </div>
             </div>
           </div>
           <div class="pay-keyboard-bottom">
             <div class="pay-key-bottom pay-key-blank"></div>
-            <div class="pay-key-bottom pay-key-middle" @click="val2input('0')">0</div>
-            <div class="pay-key-bottom pay-key-del" @click="delVal" v-html="del"></div>
+            <div class="pay-key-bottom">
+              <div class="pay-key-middle" @click="val2input('0')">0</div>
+            </div>
+            <div class="pay-key-bottom" >
+              <div class="pay-key-del" @click="delVal" v-html="del"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -50,7 +56,7 @@
         //密码长度
         pwdLength: this.payPopOptions.pwdLength || 6,
         //底部删除按钮
-        del: this.payPopOptions.del || '<svg t="1524794920212" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1048" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="30"><defs><style type="text/css"></style></defs><path d="M798.675138 191.774745c44.172035 0 80.109526 35.753295 80.109526 79.69918l0 445.373557c0 43.945885-35.93749 79.69918-80.109526 79.69918L382.443295 796.546661c-25.555026 0-49.780777-12.279674-64.804958-32.845059L154.967444 541.013801c-20.472264-28.025287-20.472264-65.680908 0-93.707219L317.638337 224.617757c15.023158-20.566408 39.249933-32.843012 64.804958-32.843012L798.675138 191.774745M798.675138 177.709401 382.443295 177.709401c-30.16502 0-58.508555 14.365172-76.240405 38.641065L143.531997 439.038268c-24.009833 32.865525-24.009833 77.378321 0 110.245893l162.670893 222.685755c17.732873 24.276916 46.075385 38.641065 76.240405 38.641065l416.231843 0c52.051493 0 94.247524-41.977044 94.247524-93.762477l0-445.373557C892.922662 219.688491 850.726631 177.709401 798.675138 177.709401L798.675138 177.709401zM475.470015 356.690772l218.792075 218.791052c10.984169 10.986215 10.984169 28.795836 0 39.780005-10.986215 10.986215-28.795836 10.986215-39.781028 0L435.69001 396.470777c-10.986215-10.984169-10.986215-28.795836 0-39.780005C446.674179 345.704556 464.485847 345.704556 475.470015 356.690772zM437.268972 578.919109l223.685525-224.042659c11.228739-11.247158 29.438473-11.247158 40.669258 0 11.230786 11.249205 11.230786 29.487591 0 40.73475L477.93823 619.654882c-11.228739 11.249205-29.438473 11.249205-40.669258 0C426.039209 608.404654 426.039209 590.167291 437.268972 578.919109z" p-id="1049" fill="#1296db"></path></svg>',
+        del: this.payPopOptions.del || '<svg t="1524794920212" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1048" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="30"><defs><style type="text/css"></style></defs><path d="M798.675138 191.774745c44.172035 0 80.109526 35.753295 80.109526 79.69918l0 445.373557c0 43.945885-35.93749 79.69918-80.109526 79.69918L382.443295 796.546661c-25.555026 0-49.780777-12.279674-64.804958-32.845059L154.967444 541.013801c-20.472264-28.025287-20.472264-65.680908 0-93.707219L317.638337 224.617757c15.023158-20.566408 39.249933-32.843012 64.804958-32.843012L798.675138 191.774745M798.675138 177.709401 382.443295 177.709401c-30.16502 0-58.508555 14.365172-76.240405 38.641065L143.531997 439.038268c-24.009833 32.865525-24.009833 77.378321 0 110.245893l162.670893 222.685755c17.732873 24.276916 46.075385 38.641065 76.240405 38.641065l416.231843 0c52.051493 0 94.247524-41.977044 94.247524-93.762477l0-445.373557C892.922662 219.688491 850.726631 177.709401 798.675138 177.709401L798.675138 177.709401zM475.470015 356.690772l218.792075 218.791052c10.984169 10.986215 10.984169 28.795836 0 39.780005-10.986215 10.986215-28.795836 10.986215-39.781028 0L435.69001 396.470777c-10.986215-10.984169-10.986215-28.795836 0-39.780005C446.674179 345.704556 464.485847 345.704556 475.470015 356.690772zM437.268972 578.919109l223.685525-224.042659c11.228739-11.247158 29.438473-11.247158 40.669258 0 11.230786 11.249205 11.230786 29.487591 0 40.73475L477.93823 619.654882c-11.228739 11.249205-29.438473 11.249205-40.669258 0C426.039209 608.404654 426.039209 590.167291 437.268972 578.919109z" p-id="1049" fill="#333"></path></svg>',
         //默认等候文字
         loadingTxt: this.payPopOptions.loadingTxt || '请稍候...',
         //默认等候时间
@@ -132,7 +138,7 @@
     right: 0;
     bottom: -400px;
     height: 400px;
-    background: #fff;
+    background: #f6f6f6;
     border-top: 1px solid #c7c7c7;
     z-index: 99;
     overflow: hidden;
@@ -205,27 +211,16 @@
     left: 0;
     right: 0;
     bottom: 0;
+    padding: 7px 10px;
+    background-color: #f6f6f6;
   }
   .pay-keyboard,
   .pay-keyboard-bottom {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    background-color: #f2f8fa;
   }
-  .pay-keyboard:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    color: #c7c7c7;
-    transform: scaleY(.5);
-    content: "";
-    border-top: 1px solid #c7c7c7;
-    z-index: 1000;
-  }
-  .pay-key,
+  .pay-key-wrapper,
   .pay-key-bottom {
     position: relative;
     display: flex;
@@ -234,60 +229,37 @@
     flex: 0 0 33.33333333%;
     height: 50px;
     font-size: 16px;
-    background-color: #fff;
+    background-color: #f6f6f6;
+  }
+  .pay-key,
+  .pay-key-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Microsoft YaHei';
+    box-shadow: 0 2px 5px #999;
     cursor: pointer;
   }
-  .pay-key-blank,
   .pay-key-del {
-    background-color: #f2f8fa;
-  }
-  .pay-key:before {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    color: #c7c7c7;
-    transform: scaleY(.5);
-    content: "";
-    border-top: 1px solid #c7c7c7;
-    z-index: 1000;
-  }
-  .pay-key:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 1px;
-    content: "";
-    border-left: 1px solid #c7c7c7;
-    transform: scaleX(.5);
-    color: #c7c7c7;
-    z-index: 1000;
-  }
-  .pay-key-middle:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 1px;
-    content: "";
-    border-left: 1px solid #c7c7c7;
-    transform: scaleX(.5);
-    color: #c7c7c7;
-    z-index: 1000;
-  }
-  .pay-key-middle:after {
-    position: absolute;
-    top: 0;
-    right: -2px;
-    bottom: 0;
-    width: 1px;
-    content: "";
-    border-left: 1px solid #c7c7c7;
-    transform: scaleX(.5);
-    color: #c7c7c7;
-    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Microsoft YaHei';
+    cursor: pointer;
   }
   .pay-result {
     text-align: center;
