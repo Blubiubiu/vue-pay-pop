@@ -10,7 +10,6 @@ const PayPop = {
 }
 if (typeof window !== 'undefined' && window.Vue) {
     window.PayPop = PayPop
-    Vue.use(PayPop)
 }
 export default PayPop
 
