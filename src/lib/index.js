@@ -9,8 +9,12 @@ const PayPop = {
     }
 }
 if (typeof window !== 'undefined' && window.Vue) {
-    window.PayPop = PayPop
+  window.Vue.use(PayPop);
 }
 export default PayPop
+
+export {
+  vuePayPop
+}
 
 
