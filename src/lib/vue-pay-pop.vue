@@ -1,5 +1,6 @@
 <template>
   <div class="pay-box">
+    <!-- 输入框及键盘 -->
     <div :class="payPopOptions.isShow? 'pay-wrapper pay-wrapper-active' : 'pay-wrapper'">
       <div class="pay-container" v-if="status">
         <div class="pay-title">
@@ -26,17 +27,15 @@
           </div>
         </div>
       </div>
-
+      <!-- 结果显示 -->
       <div class="pay-result" v-if="!status">
         <div class="loader"></div>
         <div>{{loadingTxt}}</div>
       </div>
     </div>
-
+    <!-- 遮罩层 -->
     <div class="gray-wrapper" v-show="payPopOptions.isShow"></div>
   </div>
-
-
 </template>
 
 <script>
@@ -48,8 +47,6 @@
         //可选参数，支持改变
         //顶部文字
         title: this.payPopOptions.title || '请输入支付密码',
-        //顶部关闭按钮
-
         //密码长度
         pwdLength: this.payPopOptions.pwdLength || 6,
         //底部删除按钮
@@ -69,8 +66,6 @@
         keyBoards: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
         //键入的值
         val: [],
-        //默认输入框是否显示
-        //isShow: this.payPopOptions.isShow,
         //默认输入框与等待层是否显示
         status: true
       }
