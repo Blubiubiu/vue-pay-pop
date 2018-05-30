@@ -30,7 +30,7 @@ Vue.use(vuePayPop)
   <template>
     <div id="app">
       <div @click="showPayPop">点击弹出支付框</div>
-      <vue-pay-pop ref="pay" :payPopOptions="payPopOptions" ></vue-pay-pop>
+      <vue-pay-pop ref="pay" :payPopOptions="payPopOptions" @inputDown="inputDown"></vue-pay-pop>
     </app>
   </template>
 ```
@@ -45,18 +45,20 @@ Vue.use(vuePayPop)
           },
         }
       },
-      inputDown(val) {
-      //模拟检查数据
-        setTimeout(() => {
-          if (val == '111111') {
-            this.$refs.pay.$payStatus(true)
-          } else {
-            this.$refs.pay.$payStatus(false)
-          }
-        }, 1000)
-      },
-      showPayPop() {
-        this.payPopOptions.isShow = true;
+      methods: {
+        inputDown(val) {
+        //模拟检查数据
+          setTimeout(() => {
+            if (val == '111111') {
+              this.$refs.pay.$payStatus(true)
+            } else {
+              this.$refs.pay.$payStatus(false)
+            }
+          }, 1000)
+        },
+        showPayPop() {
+          this.payPopOptions.isShow = true;
+        }
       }
     }
   </script>
