@@ -84,6 +84,6 @@ if you find some questions, please contact me!
 
 bling_faker@163.com
 
-if you like it, show me your star, thanks very much
+if you like it, show me your star, thanks very much!
 
 
