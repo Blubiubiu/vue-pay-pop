@@ -24,7 +24,7 @@ export default {
     inputDown(val) {
       //模拟检查数据
       setTimeout(() => {
-        if (val == '111111') {
+        if (val == '111222') {
           this.$refs.pay.$payStatus(true)
         } else {
           this.$refs.pay.$payStatus(false)
