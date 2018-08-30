@@ -31,6 +31,7 @@ export default {
         }
       }, 1000)
     },
+    //展示输入键盘
     showPayPop() {
       this.payPopOptions.isShow = true;
     }
